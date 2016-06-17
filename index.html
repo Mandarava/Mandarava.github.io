@@ -248,7 +248,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/06/16/AJAX跨域/" itemprop="url">
+                <a class="post-title-link" href="/2016/06/16/AJAX Cross-domain requests/" itemprop="url">
                   AJAX Cross-domain requests
                 </a>
               
@@ -292,8 +292,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/16/AJAX跨域/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/AJAX跨域/" itemprop="commentsCount"></span>
+                <a href="/2016/06/16/AJAX Cross-domain requests/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/AJAX Cross-domain requests/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -316,10 +316,10 @@
 
       
         
-          <h2 id="AJAX跨域请求-JSONP"><a href="#AJAX跨域请求-JSONP" class="headerlink" title="AJAX跨域请求 - JSONP"></a>AJAX跨域请求 - JSONP</h2><p>struts2中的配置：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;result name="json" type="json"&gt;</span><br><span class="line">    &lt;param name="callbackParameter"&gt;callback&lt;/param&gt;</span><br><span class="line">&lt;/result&gt;</span><br><span class="line">//jsonp回调函数名(callback)</span><br><span class="line">String jsonpCallback = HttpServletRequest.getParameter("callbackFunction");</span><br><span class="line">//返回jsonp格式数据  </span><br><span class="line">out.println(jsonpCallback+"("+resultJson.toString()+")");</span><br></pre></td></tr></table></figure></p>
-<p>JQuery：\$.ajax/ \$.getJSON支持jsonp格式的跨域，但是只支持GET方式，暂不支持POST<br>
+          <h2 id="AJAX跨域请求-JSONP"><a href="#AJAX跨域请求-JSONP" class="headerlink" title="AJAX跨域请求 - JSONP"></a>AJAX跨域请求 - JSONP</h2><p>struts2中的配置：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"json"</span> <span class="attr">type</span>=<span class="string">"json"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"callbackParameter"</span>&gt;</span>callback<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//jsonp回调函数名(callback)</span></span><br><span class="line">String jsonpCallback = HttpServletRequest.getParameter(<span class="string">"callbackFunction"</span>);</span><br><span class="line"><span class="comment">//返回jsonp格式数据  </span></span><br><span class="line">out.println(jsonpCallback+<span class="string">"("</span>+resultJson.toString()+<span class="string">")"</span>);</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/16/AJAX跨域/#more" rel="contents">
+            <a class="btn" href="/2016/06/16/AJAX Cross-domain requests/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
