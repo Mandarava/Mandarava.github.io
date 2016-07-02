@@ -1,2 +1,2 @@
 ## My Blog
-* 链接 : ztchen.com
+* 链接 : [ztchen.com](ztchen.com)
