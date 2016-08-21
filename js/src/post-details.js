@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $(document)
       .on('affixed.bs.affix', function () {
-        updateTOCHeight(document.body.clientHeight - 100)
+        updateTOCHeight(document.body.clientHeight - 100);
       });
   }
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   var html = $('html');
-  var TAB_ANIMATE_DURATION = 100;
+  var TAB_ANIMATE_DURATION = 200;
   var hasVelocity = $.isFunction(html.velocity);
 
   $('.sidebar-nav li').on('click', function () {
