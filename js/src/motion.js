@@ -254,7 +254,7 @@ $(document).ready(function () {
     menu: function (integrator) {
       $('.menu-item').velocity('transition.slideDownIn', {
         display: null,
-        duration: 100,
+        duration: 200,
         complete: function () {
           integrator.next();
         }
