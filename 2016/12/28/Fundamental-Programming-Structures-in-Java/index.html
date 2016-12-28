@@ -1,0 +1,1144 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Mandarava" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1、数据类型　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fundamental Programming Structures in Java">
+<meta property="og:url" content="http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/index.html">
+<meta property="og:site_name" content="Mandarava">
+<meta property="og:description" content="1、数据类型　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。">
+<meta property="og:updated_time" content="2016-12-28T15:00:40.334Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fundamental Programming Structures in Java">
+<meta name="twitter:description" content="1、数据类型　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/"/>
+
+  <title> Fundamental Programming Structures in Java | Mandarava </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?24bfa3be8786c1d92fb95597e18e0dc3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Mandarava</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">blog</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Fundamental Programming Structures in Java
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-28T22:18:05+08:00" content="2016-12-28">
+              2016-12-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/28/Fundamental-Programming-Structures-in-Java/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/28/Fundamental-Programming-Structures-in-Java/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h2><p>　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。<br><a id="more"></a></p>
+<h3 id="1-1、Java整型"><a href="#1-1、Java整型" class="headerlink" title="1.1、Java整型"></a>1.1、Java整型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">存储需求</th>
+<th style="text-align:left">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">int</td>
+<td style="text-align:left">4字节</td>
+<td style="text-align:left">-2 147 483 648 ~ 2 147 483 647(正好超过20亿)</td>
+</tr>
+<tr>
+<td style="text-align:left">short</td>
+<td style="text-align:left">2字节</td>
+<td style="text-align:left">-32 768 ~ 32767</td>
+</tr>
+<tr>
+<td style="text-align:left">long</td>
+<td style="text-align:left">8字节</td>
+<td style="text-align:left">-9 223 372 036 854 775 808 ~ 9 223 372 036 854 775 807</td>
+</tr>
+</tbody>
+</table>
+<p>　　从Java7开始，加上前缀0b就可以写二进制数。例如，0b1001就是9。还可以为数字字面量加下划线，如用1_000_000表示100万。这些下划线只是为了让人更易读。Java编译器会去除这些下划线。</p>
+<h3 id="1-2、浮点类型"><a href="#1-2、浮点类型" class="headerlink" title="1.2、浮点类型"></a>1.2、浮点类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">存储需求</th>
+<th style="text-align:left">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">float</td>
+<td style="text-align:left">4字节</td>
+<td style="text-align:left">大约 ± 3.402 823 47E + 38F(有效位数为6 ~ 7位)</td>
+</tr>
+<tr>
+<td style="text-align:left">double</td>
+<td style="text-align:left">8字节</td>
+<td style="text-align:left">大约 ± 1.797 693 134 862 315 70E + 308 (有效位数为 15 位)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2、运算符优先级：-同一级别运算符按照从左到右的次序进行计算"><a href="#2、运算符优先级：-同一级别运算符按照从左到右的次序进行计算" class="headerlink" title="2、运算符优先级：(同一级别运算符按照从左到右的次序进行计算)"></a>2、运算符优先级：(同一级别运算符按照从左到右的次序进行计算)</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">运算符</th>
+<th style="text-align:center">结合性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">[].()(方法调用)</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">!~++–+(一元运算)-(一元运算)()(强制类型转换) new</td>
+<td style="text-align:center">从右向左</td>
+</tr>
+<tr>
+<td style="text-align:left">*/%</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">+-</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt; &lt;= &gt; &gt;= instanceof</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">== !=</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&#124;</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&amp;&amp;</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">&#124;&#124;</td>
+<td style="text-align:center">从左向右</td>
+</tr>
+<tr>
+<td style="text-align:left">?:</td>
+<td style="text-align:center">从右向左</td>
+</tr>
+<tr>
+<td style="text-align:left">= += -= *= /= %= &amp;= &#124;= ^= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</td>
+<td style="text-align:center">从右向左</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3、检测字符串是否相等"><a href="#3、检测字符串是否相等" class="headerlink" title="3、检测字符串是否相等"></a>3、检测字符串是否相等</h2><pre><code>s.equals(t);
+</code></pre><p>　　一定不能使用 == 运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否放置在同一个位置上。当然，如果字符串放置在同一个位置上，它们必然相等。但是，完全有可能将内容相同的多个字符串的拷贝放置在不同的位置上。</p>
+<pre><code>String greeting = &quot;Hello&quot;; //initialize greeting to a string  
+if(greeting == &quot;Hello&quot;) ...  
+// probably true  
+if(greeting.substring(0,3) == &quot;Hel&quot;) ...  
+// probably false  
+</code></pre><p>　　如果虚拟机始终将相同的字符串共享，就可以使用==运算符检测是否相等。但实际上只有字符串<em>常量</em>是共享的，而 + 或 substring等操作产生的结果并不是共享的。因此，千万不要使用 == 运算符测试字符串的相等性，以免在程序中出现糟糕的bug。</p>
+<h2 id="4、构建字符串"><a href="#4、构建字符串" class="headerlink" title="4、构建字符串"></a>4、构建字符串</h2><p>　　有些时候，需要由较短的字符串构建字符串。采用字符串连接的方式达到此目的的效率比较低。每次连接字符串，都会构建一个新的String对象，即耗时，又浪费空间。使用StringBuilder类就可以避免这个问题的发生。</p>
+<pre><code>StringBuilder builder = new StringBuilder();  
+builder.append(ch); // appends a single character  
+builder.append(str); // appends a string  
+</code></pre><p>　　在需要构建字符串时就调用toString方法，将可以得到一个String对象。</p>
+<pre><code>String colpletedString = builder.toString();　　//StringBuilder没有重写equals方法。    
+</code></pre><p>　　在JDK5.0中引入StringBuilder类。这个类的前身是StringBuffer，其效率稍有些低，但允许采用多线程的方式执行添加或删除字符的操作。</p>
+<h2 id="5、格式化输出"><a href="#5、格式化输出" class="headerlink" title="5、格式化输出"></a>5、格式化输出</h2><p>　　Java中printf的转换符和标识(包含日期的)用于printf的转换符</p>
+<h3 id="5-1、用于prinf的转换符"><a href="#5-1、用于prinf的转换符" class="headerlink" title="5.1、用于prinf的转换符"></a>5.1、用于prinf的转换符</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">转换符</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">十进制整数</td>
+<td style="text-align:left">159</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">十六进制整数</td>
+<td style="text-align:left">9f</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left">八进制整数</td>
+<td style="text-align:left">237</td>
+</tr>
+<tr>
+<td style="text-align:left">f</td>
+<td style="text-align:left">定点浮点数</td>
+<td style="text-align:left">15.9</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">指数浮点数</td>
+<td style="text-align:left">1.59e+01</td>
+</tr>
+<tr>
+<td style="text-align:left">g</td>
+<td style="text-align:left">通用浮点数</td>
+<td style="text-align:left">——</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">十六进制浮点数</td>
+<td style="text-align:left">0x1.fccdp3</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">字符串</td>
+<td style="text-align:left">Hello</td>
+</tr>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">字符</td>
+<td style="text-align:left">H</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:left">布尔</td>
+<td style="text-align:left">true</td>
+</tr>
+<tr>
+<td style="text-align:left">h</td>
+<td style="text-align:left">散列码</td>
+<td style="text-align:left">42628b2</td>
+</tr>
+<tr>
+<td style="text-align:left">tx</td>
+<td style="text-align:left">日期时间</td>
+<td style="text-align:left">见下表</td>
+</tr>
+<tr>
+<td style="text-align:left">%</td>
+<td style="text-align:left">百分号</td>
+<td style="text-align:left">%</td>
+</tr>
+<tr>
+<td style="text-align:left">n</td>
+<td style="text-align:left">与平台有关的行分隔符</td>
+<td style="text-align:left">——</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
+<pre><code>System.out.printf(&quot;Hello,%s.　Next year, you&apos;ll be%d&quot;, name,　age);
+</code></pre><h3 id="5-2、用于printf的标志"><a href="#5-2、用于printf的标志" class="headerlink" title="5.2、用于printf的标志"></a>5.2、用于printf的标志</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">标识</th>
+<th style="text-align:left">目的</th>
+<th style="text-align:left">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">+</td>
+<td style="text-align:left">打印正数和负数的符号</td>
+<td style="text-align:left">+3333.33</td>
+</tr>
+<tr>
+<td style="text-align:left">空格</td>
+<td style="text-align:left">在正数之前加空格</td>
+<td style="text-align:left">&#124;　3333.33&#124;</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:left">数字之前补0</td>
+<td style="text-align:left">003333.33</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">左对齐</td>
+<td style="text-align:left">&#124;3333.33　&#124;</td>
+</tr>
+<tr>
+<td style="text-align:left">(</td>
+<td style="text-align:left">将负数括在括号内</td>
+<td style="text-align:left">(3333.33)</td>
+</tr>
+<tr>
+<td style="text-align:left">,</td>
+<td style="text-align:left">添加分组分隔符</td>
+<td style="text-align:left">3,333.33</td>
+</tr>
+<tr>
+<td style="text-align:left">#(用于f格式)</td>
+<td style="text-align:left">包含小数点</td>
+<td style="text-align:left">3,333.</td>
+</tr>
+<tr>
+<td style="text-align:left">#(对于x或0格式)</td>
+<td style="text-align:left">添加前缀0x或0</td>
+<td style="text-align:left">0xcafe</td>
+</tr>
+<tr>
+<td style="text-align:left">^</td>
+<td style="text-align:left">转换为大写</td>
+<td style="text-align:left">0xCAFE</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">指定将被格式化的参数索引,例如%1$d,%1$x将以十进制和十六进制格式打印第一个参数</td>
+<td style="text-align:left">159 9f</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;</td>
+<td style="text-align:left">格式化前面说明的数值，例如%d%&lt;x以十进制和十六进制打印同一个数</td>
+<td style="text-align:left">159 9f</td>
+</tr>
+</tbody>
+</table>
+<p>举例：</p>
+<pre><code>System.out.printf(&quot;%,.2f&quot;,&quot;10000.0./3.0&quot;); 打印3,333.33
+</code></pre><h3 id="5-3、日期和时间的转换符"><a href="#5-3、日期和时间的转换符" class="headerlink" title="5.3、日期和时间的转换符"></a>5.3、日期和时间的转换符</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">转换符</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">完整的日期和时间</td>
+<td style="text-align:left">Mon Feb 09 18:05:11 PST 2004</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">ISO 8061日期</td>
+<td style="text-align:left">2004-02-09</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:left">美国格式的日期</td>
+<td style="text-align:left">02/09/2004</td>
+</tr>
+<tr>
+<td style="text-align:left">T</td>
+<td style="text-align:left">24小时时间</td>
+<td style="text-align:left">18:03:23</td>
+</tr>
+<tr>
+<td style="text-align:left">r</td>
+<td style="text-align:left">12小时时间</td>
+<td style="text-align:left">05:03:23 pm</td>
+</tr>
+<tr>
+<td style="text-align:left">R</td>
+<td style="text-align:left">24小时时间没有秒</td>
+<td style="text-align:left">18:05</td>
+</tr>
+<tr>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">4位数字的年（前面补0）</td>
+<td style="text-align:left">2004</td>
+</tr>
+<tr>
+<td style="text-align:left">y</td>
+<td style="text-align:left">年的后两位数字（前面补0）</td>
+<td style="text-align:left">04</td>
+</tr>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">年的前两位数字（前面补0）</td>
+<td style="text-align:left">20</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:left">月的完整拼写</td>
+<td style="text-align:left">February</td>
+</tr>
+<tr>
+<td style="text-align:left">b或h</td>
+<td style="text-align:left">月的缩写</td>
+<td style="text-align:left">Feb</td>
+</tr>
+<tr>
+<td style="text-align:left">m</td>
+<td style="text-align:left">两位数字的月（前面补0）</td>
+<td style="text-align:left">02</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">两位数字的日（前面补0）</td>
+<td style="text-align:left">09</td>
+</tr>
+<tr>
+<td style="text-align:left">e</td>
+<td style="text-align:left">两位数字的月（前面不补0）</td>
+<td style="text-align:left">9</td>
+</tr>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">星期几的完整拼写</td>
+<td style="text-align:left">Monday</td>
+</tr>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">星期几的缩写</td>
+<td style="text-align:left">Mon</td>
+</tr>
+<tr>
+<td style="text-align:left">j</td>
+<td style="text-align:left">三位数的年中的日子（前面补0），在001到366之间</td>
+<td style="text-align:left">069</td>
+</tr>
+<tr>
+<td style="text-align:left">H</td>
+<td style="text-align:left">两位数字的小时（前面补0）。在0到23之间</td>
+<td style="text-align:left">18</td>
+</tr>
+<tr>
+<td style="text-align:left">k</td>
+<td style="text-align:left">两位数字的小时（前面不补0）在0到23之间</td>
+<td style="text-align:left">8</td>
+</tr>
+<tr>
+<td style="text-align:left">I</td>
+<td style="text-align:left">两位数字的小时（前面补0）。在0到12之间</td>
+<td style="text-align:left">06</td>
+</tr>
+<tr>
+<td style="text-align:left">l</td>
+<td style="text-align:left">两位数字的小时（前面不补0），在0到12之间</td>
+<td style="text-align:left">6</td>
+</tr>
+<tr>
+<td style="text-align:left">M</td>
+<td style="text-align:left">两位数字的分钟（前面补0）</td>
+<td style="text-align:left">05</td>
+</tr>
+<tr>
+<td style="text-align:left">S</td>
+<td style="text-align:left">两位数字的秒（前面补0）</td>
+<td style="text-align:left">19</td>
+</tr>
+<tr>
+<td style="text-align:left">L</td>
+<td style="text-align:left">三位数字的毫秒（前面补0）</td>
+<td style="text-align:left">047</td>
+</tr>
+<tr>
+<td style="text-align:left">N</td>
+<td style="text-align:left">九位数字的毫微秒（前面补0）</td>
+<td style="text-align:left">047000000</td>
+</tr>
+<tr>
+<td style="text-align:left">P</td>
+<td style="text-align:left">上午或者下午的大写标志</td>
+<td style="text-align:left">PM</td>
+</tr>
+<tr>
+<td style="text-align:left">p</td>
+<td style="text-align:left">上午或者下午的小写标志</td>
+<td style="text-align:left">pm</td>
+</tr>
+<tr>
+<td style="text-align:left">z</td>
+<td style="text-align:left">从GMT起。RFC822数字移位</td>
+<td style="text-align:left">-0800</td>
+</tr>
+<tr>
+<td style="text-align:left">Z</td>
+<td style="text-align:left">时区</td>
+<td style="text-align:left">PST</td>
+</tr>
+<tr>
+<td style="text-align:left">s</td>
+<td style="text-align:left">从格林威治时间1970-01-01 00:00:00起的秒数</td>
+<td style="text-align:left">107884319</td>
+</tr>
+<tr>
+<td style="text-align:left">Q</td>
+<td style="text-align:left">从格林威治时间1970-01-01 00:00:01起的毫秒数</td>
+<td style="text-align:left">107884319047</td>
+</tr>
+</tbody>
+</table>
+<p>　　可以采用一个格式化的字符串指出要被格式化的参数索引。索引必须紧跟在%后面，并以$终止。参数索引值从1开始，而不是从0开始。<br>例如：</p>
+<pre><code>System.out.printf(&quot;%1$s %2$tB %2$te, %2$tY&quot;,&quot;Due date:&quot;, new Date());
+</code></pre><p>打印：  Due Date: February 9, 2004<br>还可以选择使用 &lt; 标志。它指示前面格式说明中的参数将被再次使用。也就是说，下列语句将产生与前面语句同样的输出结果：</p>
+<pre><code>System.out.printf(&quot;%s %tB %&lt;te, %&lt;tY&quot;, &quot;Due Date:&quot;, new Date());
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/22/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/28/Fundamental-Programming-Structures-in-Java/"
+           data-title="Fundamental Programming Structures in Java" data-url="http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avtar.png"
+               alt="Mandarava" />
+          <p class="site-author-name" itemprop="name">Mandarava</p>
+          <p class="site-description motion-element" itemprop="description">生命不息，折腾不止</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Mandarava" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、数据类型"><span class="nav-number">1.</span> <span class="nav-text">1、数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1、Java整型"><span class="nav-number">1.1.</span> <span class="nav-text">1.1、Java整型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2、浮点类型"><span class="nav-number">1.2.</span> <span class="nav-text">1.2、浮点类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、运算符优先级：-同一级别运算符按照从左到右的次序进行计算"><span class="nav-number">2.</span> <span class="nav-text">2、运算符优先级：(同一级别运算符按照从左到右的次序进行计算)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、检测字符串是否相等"><span class="nav-number">3.</span> <span class="nav-text">3、检测字符串是否相等</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、构建字符串"><span class="nav-number">4.</span> <span class="nav-text">4、构建字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、格式化输出"><span class="nav-number">5.</span> <span class="nav-text">5、格式化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1、用于prinf的转换符"><span class="nav-number">5.1.</span> <span class="nav-text">5.1、用于prinf的转换符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2、用于printf的标志"><span class="nav-number">5.2.</span> <span class="nav-text">5.2、用于printf的标志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3、日期和时间的转换符"><span class="nav-number">5.3.</span> <span class="nav-text">5.3、日期和时间的转换符</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mandarava</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ztchen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>
