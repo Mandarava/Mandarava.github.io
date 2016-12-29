@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/index.html">
 <meta property="og:site_name" content="Mandarava">
 <meta property="og:description" content="1、数据类型　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。">
-<meta property="og:updated_time" content="2016-12-28T15:00:40.334Z">
+<meta property="og:updated_time" content="2016-12-29T15:07:10.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fundamental Programming Structures in Java">
 <meta name="twitter:description" content="1、数据类型　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。">
@@ -348,9 +348,9 @@
 <h3 id="1-1、Java整型"><a href="#1-1、Java整型" class="headerlink" title="1.1、Java整型"></a>1.1、Java整型</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">类型</th>
-<th style="text-align:left">存储需求</th>
-<th style="text-align:left">取值范围</th>
+<th style="text-align:left;width:25%">类型</th>
+<th style="text-align:left;width:25%">存储需求</th>
+<th style="text-align:left;width:50%">取值范围</th>
 </tr>
 </thead>
 <tbody>
@@ -375,9 +375,9 @@
 <h3 id="1-2、浮点类型"><a href="#1-2、浮点类型" class="headerlink" title="1.2、浮点类型"></a>1.2、浮点类型</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">类型</th>
-<th style="text-align:left">存储需求</th>
-<th style="text-align:left">取值范围</th>
+<th style="text-align:left;width: 25%" >类型</th>
+<th style="text-align:left;width: 25%" >存储需求</th>
+<th style="text-align:left;width: 50%">取值范围</th>
 </tr>
 </thead>
 <tbody>
@@ -402,11 +402,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">[].()(方法调用)</td>
+<td style="text-align:left">[ ].( )(方法调用)</td>
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
-<td style="text-align:left">!~++–+(一元运算)-(一元运算)()(强制类型转换) new</td>
+<td style="text-align:left">!　~　++　–　+(一元运算)　-　(一元运算)()(强制类型转换) new</td>
 <td style="text-align:center">从右向左</td>
 </tr>
 <tr>
@@ -414,19 +414,19 @@
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
-<td style="text-align:left">+-</td>
+<td style="text-align:left">+　-</td>
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
-<td style="text-align:left">&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+<td style="text-align:left">&lt;&lt;　&gt;&gt;　&gt;&gt;&gt;</td>
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
-<td style="text-align:left">&lt; &lt;= &gt; &gt;= instanceof</td>
+<td style="text-align:left">&lt;　&lt;=　&gt;　&gt;= instanceof</td>
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
-<td style="text-align:left">== !=</td>
+<td style="text-align:left">==　!=</td>
 <td style="text-align:center">从左向右</td>
 </tr>
 <tr>
@@ -454,7 +454,7 @@
 <td style="text-align:center">从右向左</td>
 </tr>
 <tr>
-<td style="text-align:left">= += -= *= /= %= &amp;= &#124;= ^= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</td>
+<td style="text-align:left">=　+=　-=　*=　/=　%=　&amp;=　&#124;=　^=　&lt;&lt;=　&gt;&gt;=　&gt;&gt;&gt;=</td>
 <td style="text-align:center">从右向左</td>
 </tr>
 </tbody>
@@ -472,7 +472,7 @@ if(greeting.substring(0,3) == &quot;Hel&quot;) ...
 builder.append(ch); // appends a single character  
 builder.append(str); // appends a string  
 </code></pre><p>　　在需要构建字符串时就调用toString方法，将可以得到一个String对象。</p>
-<pre><code>String colpletedString = builder.toString();　　//StringBuilder没有重写equals方法。    
+<pre><code>String completedString = builder.toString();　　//StringBuilder没有重写equals方法。    
 </code></pre><p>　　在JDK5.0中引入StringBuilder类。这个类的前身是StringBuffer，其效率稍有些低，但允许采用多线程的方式执行添加或删除字符的操作。</p>
 <h2 id="5、格式化输出"><a href="#5、格式化输出" class="headerlink" title="5、格式化输出"></a>5、格式化输出</h2><p>　　Java中printf的转换符和标识(包含日期的)用于printf的转换符</p>
 <h3 id="5-1、用于prinf的转换符"><a href="#5-1、用于prinf的转换符" class="headerlink" title="5.1、用于prinf的转换符"></a>5.1、用于prinf的转换符</h3><table>
@@ -557,7 +557,7 @@ builder.append(str); // appends a string
 </tbody>
 </table>
 <p>举例：</p>
-<pre><code>System.out.printf(&quot;Hello,%s.　Next year, you&apos;ll be%d&quot;, name,　age);
+<pre><code>System.out.printf(&quot;Hello, %s.　Next year, you&apos;ll be %d&quot;, name,　age);
 </code></pre><h3 id="5-2、用于printf的标志"><a href="#5-2、用于printf的标志" class="headerlink" title="5.2、用于printf的标志"></a>5.2、用于printf的标志</h3><table>
 <thead>
 <tr>
@@ -614,13 +614,13 @@ builder.append(str); // appends a string
 </tr>
 <tr>
 <td style="text-align:left">$</td>
-<td style="text-align:left">指定将被格式化的参数索引,例如%1$d,%1$x将以十进制和十六进制格式打印第一个参数</td>
-<td style="text-align:left">159 9f</td>
+<td style="text-align:left">给定被格式化的参数索引。例如， %1\$d, %1\$x将以十进制和十六进制格式打印第一个参数</td>
+<td style="text-align:left">159 9F</td>
 </tr>
 <tr>
 <td style="text-align:left">&lt;</td>
-<td style="text-align:left">格式化前面说明的数值，例如%d%&lt;x以十进制和十六进制打印同一个数</td>
-<td style="text-align:left">159 9f</td>
+<td style="text-align:left">格式化前面说明的数值。 例如%d%&lt;x以十进制和十六进制打印同一个数值</td>
+<td style="text-align:left">159 9F</td>
 </tr>
 </tbody>
 </table>
@@ -728,15 +728,15 @@ builder.append(str); // appends a string
 <tr>
 <td style="text-align:left">k</td>
 <td style="text-align:left">两位数字的小时（前面不补0）在0到23之间</td>
-<td style="text-align:left">8</td>
+<td style="text-align:left">18</td>
 </tr>
 <tr>
-<td style="text-align:left">I</td>
+<td style="text-align:left">I（大写i）</td>
 <td style="text-align:left">两位数字的小时（前面补0）。在0到12之间</td>
 <td style="text-align:left">06</td>
 </tr>
 <tr>
-<td style="text-align:left">l</td>
+<td style="text-align:left">1（数字1）</td>
 <td style="text-align:left">两位数字的小时（前面不补0），在0到12之间</td>
 <td style="text-align:left">6</td>
 </tr>
@@ -794,7 +794,7 @@ builder.append(str); // appends a string
 </table>
 <p>　　可以采用一个格式化的字符串指出要被格式化的参数索引。索引必须紧跟在%后面，并以$终止。参数索引值从1开始，而不是从0开始。<br>例如：</p>
 <pre><code>System.out.printf(&quot;%1$s %2$tB %2$te, %2$tY&quot;,&quot;Due date:&quot;, new Date());
-</code></pre><p>打印：  Due Date: February 9, 2004<br>还可以选择使用 &lt; 标志。它指示前面格式说明中的参数将被再次使用。也就是说，下列语句将产生与前面语句同样的输出结果：</p>
+</code></pre><p>打印：  Due　Date:　February　9,　2004<br>还可以选择使用 &lt; 标志。它指示前面格式说明中的参数将被再次使用。也就是说，下列语句将产生与前面语句同样的输出结果：</p>
 <pre><code>System.out.printf(&quot;%s %tB %&lt;te, %&lt;tY&quot;, &quot;Due Date:&quot;, new Date());
 </code></pre>
       

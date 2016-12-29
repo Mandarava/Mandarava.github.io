@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-28T15:00:40.334Z</updated>
+  <updated>2016-12-29T15:07:10.556Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/"/>
     <id>http://yoursite.com/2016/12/28/Fundamental-Programming-Structures-in-Java/</id>
     <published>2016-12-28T14:18:05.000Z</published>
-    <updated>2016-12-28T15:00:40.334Z</updated>
+    <updated>2016-12-29T15:07:10.556Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1、数据类型&quot;&gt;&lt;a href=&quot;#1、数据类型&quot; class=&quot;headerlink&quot; title=&quot;1、数据类型&quot;&gt;&lt;/a&gt;1、数据类型&lt;/h2&gt;&lt;p&gt;　　Java中一共有8种基本类型(primitive type)，其中有4种整型、2种浮点类型、1种用表示Unicode编码的字符单元的字符类型char和1种用于表示真值的boolean类型。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;1-1、Java整型&quot;&gt;&lt;a href=&quot;#1-1、Java整型&quot; class=&quot;headerlink&quot; title=&quot;1.1、Java整型&quot;&gt;&lt;/a&gt;1.1、Java整型&lt;/h3&gt;&lt;table&gt;
@@ -80,11 +80,11 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;[].()(方法调用)&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;[ ].( )(方法调用)&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;!~++–+(一元运算)-(一元运算)()(强制类型转换) new&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;!　~　++　–　+(一元运算)　-　(一元运算)()(强制类型转换) new&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从右向左&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -92,19 +92,19 @@
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;+-&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;+　-&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&amp;lt;&amp;lt; &amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&amp;lt;&amp;lt;　&amp;gt;&amp;gt;　&amp;gt;&amp;gt;&amp;gt;&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&amp;lt; &amp;lt;= &amp;gt; &amp;gt;= instanceof&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&amp;lt;　&amp;lt;=　&amp;gt;　&amp;gt;= instanceof&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;== !=&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;==　!=&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从左向右&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -132,7 +132,7 @@
 &lt;td style=&quot;text-align:center&quot;&gt;从右向左&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;= += -= *= /= %= &amp;amp;= &amp;#124;= ^= &amp;lt;&amp;lt;= &amp;gt;&amp;gt;= &amp;gt;&amp;gt;&amp;gt;=&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;=　+=　-=　*=　/=　%=　&amp;amp;=　&amp;#124;=　^=　&amp;lt;&amp;lt;=　&amp;gt;&amp;gt;=　&amp;gt;&amp;gt;&amp;gt;=&lt;/td&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;从右向左&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -150,7 +150,7 @@ if(greeting.substring(0,3) == &amp;quot;Hel&amp;quot;) ...
 builder.append(ch); // appends a single character  
 builder.append(str); // appends a string  
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　在需要构建字符串时就调用toString方法，将可以得到一个String对象。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;String colpletedString = builder.toString();　　//StringBuilder没有重写equals方法。    
+&lt;pre&gt;&lt;code&gt;String completedString = builder.toString();　　//StringBuilder没有重写equals方法。    
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　在JDK5.0中引入StringBuilder类。这个类的前身是StringBuffer，其效率稍有些低，但允许采用多线程的方式执行添加或删除字符的操作。&lt;/p&gt;
 &lt;h2 id=&quot;5、格式化输出&quot;&gt;&lt;a href=&quot;#5、格式化输出&quot; class=&quot;headerlink&quot; title=&quot;5、格式化输出&quot;&gt;&lt;/a&gt;5、格式化输出&lt;/h2&gt;&lt;p&gt;　　Java中printf的转换符和标识(包含日期的)用于printf的转换符&lt;/p&gt;
 &lt;h3 id=&quot;5-1、用于prinf的转换符&quot;&gt;&lt;a href=&quot;#5-1、用于prinf的转换符&quot; class=&quot;headerlink&quot; title=&quot;5.1、用于prinf的转换符&quot;&gt;&lt;/a&gt;5.1、用于prinf的转换符&lt;/h3&gt;&lt;table&gt;
@@ -235,7 +235,7 @@ builder.append(str); // appends a string
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;举例：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;System.out.printf(&amp;quot;Hello,%s.　Next year, you&amp;apos;ll be%d&amp;quot;, name,　age);
+&lt;pre&gt;&lt;code&gt;System.out.printf(&amp;quot;Hello, %s.　Next year, you&amp;apos;ll be %d&amp;quot;, name,　age);
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;5-2、用于printf的标志&quot;&gt;&lt;a href=&quot;#5-2、用于printf的标志&quot; class=&quot;headerlink&quot; title=&quot;5.2、用于printf的标志&quot;&gt;&lt;/a&gt;5.2、用于printf的标志&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -292,13 +292,13 @@ builder.append(str); // appends a string
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;$&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;指定将被格式化的参数索引,例如%1$d,%1$x将以十进制和十六进制格式打印第一个参数&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;159 9f&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;给定被格式化的参数索引。例如， %1\$d, %1\$x将以十进制和十六进制格式打印第一个参数&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;159 9F&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;&amp;lt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;格式化前面说明的数值，例如%d%&amp;lt;x以十进制和十六进制打印同一个数&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;159 9f&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;格式化前面说明的数值。 例如%d%&amp;lt;x以十进制和十六进制打印同一个数值&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;159 9F&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -406,15 +406,15 @@ builder.append(str); // appends a string
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;k&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;两位数字的小时（前面不补0）在0到23之间&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;8&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;18&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;I&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;I（大写i）&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;两位数字的小时（前面补0）。在0到12之间&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;06&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;l&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;1（数字1）&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;两位数字的小时（前面不补0），在0到12之间&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;6&lt;/td&gt;
 &lt;/tr&gt;
@@ -472,7 +472,7 @@ builder.append(str); // appends a string
 &lt;/table&gt;
 &lt;p&gt;　　可以采用一个格式化的字符串指出要被格式化的参数索引。索引必须紧跟在%后面，并以$终止。参数索引值从1开始，而不是从0开始。&lt;br&gt;例如：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;System.out.printf(&amp;quot;%1$s %2$tB %2$te, %2$tY&amp;quot;,&amp;quot;Due date:&amp;quot;, new Date());
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打印：  Due Date: February 9, 2004&lt;br&gt;还可以选择使用 &amp;lt; 标志。它指示前面格式说明中的参数将被再次使用。也就是说，下列语句将产生与前面语句同样的输出结果：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打印：  Due　Date:　February　9,　2004&lt;br&gt;还可以选择使用 &amp;lt; 标志。它指示前面格式说明中的参数将被再次使用。也就是说，下列语句将产生与前面语句同样的输出结果：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;System.out.printf(&amp;quot;%s %tB %&amp;lt;te, %&amp;lt;tY&amp;quot;, &amp;quot;Due Date:&amp;quot;, new Date());
 &lt;/code&gt;&lt;/pre&gt;</content>
     
