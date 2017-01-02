@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mandarava, NexT" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -86,19 +86,40 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="1、 不要编写返回引用可变对象的访问器方法在Employee类中就违反了这个设计原则，其中的getHireDay方法返回了一个Date类对象：
+class Employe {
+    private Date hireDay;
+    ...
+    public Date getHireDay() {
+        return hireDay;
+    }
+    ...
+}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/08/22/hello-world/index.html">
+<meta property="og:title" content="Objects and Classes">
+<meta property="og:url" content="http://yoursite.com/2017/01/02/objects-and-classes/index.html">
 <meta property="og:site_name" content="Mandarava">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-08-22T14:27:33.325Z">
+<meta property="og:description" content="1、 不要编写返回引用可变对象的访问器方法在Employee类中就违反了这个设计原则，其中的getHireDay方法返回了一个Date类对象：
+class Employe {
+    private Date hireDay;
+    ...
+    public Date getHireDay() {
+        return hireDay;
+    }
+    ...
+}">
+<meta property="og:updated_time" content="2017-01-02T10:04:34.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Objects and Classes">
+<meta name="twitter:description" content="1、 不要编写返回引用可变对象的访问器方法在Employee类中就违反了这个设计原则，其中的getHireDay方法返回了一个Date类对象：
+class Employe {
+    private Date hireDay;
+    ...
+    public Date getHireDay() {
+        return hireDay;
+    }
+    ...
+}">
 
 
 
@@ -119,9 +140,9 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/22/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/02/objects-and-classes/"/>
 
-  <title> Hello World | Mandarava </title>
+  <title> Objects and Classes | Mandarava </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +302,7 @@ Quick">
             
             
               
-                Hello World
+                Objects and Classes
               
             
           </h1>
@@ -293,19 +314,38 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-22T22:27:33+08:00" content="2016-08-22">
-              2016-08-22
+            <time itemprop="dateCreated" datetime="2017-01-02T17:18:05+08:00" content="2017-01-02">
+              2017-01-02
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/22/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2017/01/02/objects-and-classes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/02/objects-and-classes/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,16 +368,81 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="1、-不要编写返回引用可变对象的访问器方法"><a href="#1、-不要编写返回引用可变对象的访问器方法" class="headerlink" title="1、 不要编写返回引用可变对象的访问器方法"></a>1、 不要编写返回引用可变对象的访问器方法</h2><p>在Employee类中就违反了这个设计原则，其中的getHireDay方法返回了一个Date类对象：</p>
+<pre><code>class Employe {
+    private Date hireDay;
+    ...
+    public Date getHireDay() {
+        return hireDay;
+    }
+    ...
+}
+</code></pre><a id="more"></a>
+<p>这样会破坏封装性！请看下面这段代码：</p>
+<pre><code>Employee harry = ...;
+Date d = harry.getHireDay();
+double tenYearsInMilliSeconds = 10 * 365.25 * 24 *60 * 60 * 1000;
+d.setTime(d.getTime() - (long) tenYearsInMilliSeconds);
+</code></pre><p>出错的原因很微妙。d和harry.hireDay引用同一个对象。对d调用更改器方法就可以自动得改变这个雇员对象的私有状态！<br>如果需要返回一个可变对象的引用，应该首先对它进行克隆（clone）。下面是修改后的代码：</p>
+<pre><code>class Employee {
+    ...
+    public Date getHireDay() {
+        return hireDay.clone();
+    }
+}
+</code></pre><h2 id="2、-final实例域"><a href="#2、-final实例域" class="headerlink" title="2、 final实例域"></a>2、 final实例域</h2><p>可以将实例域定义为final。构建对象时必须初始化这样的域。也就是说，必须确保在没一个构造器执行之后，这个域的值被设置，并且在后面的操作中，不能够再对它进行修改。<br>final修饰符大都应用于基本(primitive)类型域，或不可变(immutable)类的域（如果类中的每个方法都不会改变其对象，这种类就是不可变的类）。对于可变的类，使用final修饰符可能会对读者造成混乱。例如：</p>
+<pre><code>private final Date hiredate;
+</code></pre><p>仅仅意味着存储在hiredate变量中的对象引用在对象构造之后不能被改变，而并不意味着hiredate对象是一个常量。任何方法都可以对hiredate引用的对象调用setTime更改器。</p>
+<h2 id="3、方法参数"><a href="#3、方法参数" class="headerlink" title="3、方法参数"></a>3、方法参数</h2><p>首先回顾一下在程序设计语言中有关将参数传递给方法（或函数）的一些专业术语。<em>按值调用(call by value)</em>表示方法接收的是调用者提供的 <em>值</em>。而 <em>按引用调用(call by reference)</em> 表示方法接收的是调用者提供的 <em>变量地址</em>。一个方法可以 <em>修改</em>传递引用所对应的变量值,而不能修改传递值调用所对应的变量值。“按….调用(call by)”是一个标准的计算机科学术语，它用来描述各种程序设计语言中方法参数的传递方式（事实上，以前还有 <em>按名称调用(call by name)</em>，Algol程序设计语言是最古老的高级程序设计语言之一，它使用的就是这种参数传递方式。）</p>
+<p>Java程序设计语言总是采用 <em>按值调用</em>。也就是说，方法得到的是所有参数值的一个拷贝，特别是方法不能修改传递给它的任何参数变量的内容。<br>例如，考虑下面的调用：</p>
+<pre><code>double percent = 10;
+harry.raiseSalary(percent);
+</code></pre><p>不必理踩这个方法的具体实现，在方法调用之后，percent的值还是10.<br>然而，方法参数共有两种类型：</p>
+<ul>
+<li>基本数据类型（数字、布尔值）。</li>
+<li>对象引用。 </li>
+</ul>
+<p>读者已经看到，一个方法不可能修改一个基本数据类型的参数。而对象引用作为参数就不同了，可以很容易地利用下面这个方法将一个雇员的薪金提高的操作：</p>
+<pre><code>public static void tripleSalary(Employee x) // works
+{
+    x.raiseSalary(200);
+}
+</code></pre><p>当调用</p>
+<pre><code>harry = new Employee(...);
+tripleSalary(harry);
+</code></pre><p>时，具体的执行过程为：<br>1) x 被初始化为harry值的拷贝，这里是一个对象的引用。<br>2) raiseSalary方法应用于这个对象引用。x和harry同时引用的那个Employee对象的薪金提高了200%。<br>3) 方法结束后，参数变量x不再使用。当然，对象变量harry继续引用那个薪金增至3倍的雇员对象。</p>
+<p>实现一个改变对象参数状态的方法并不是一件难事。理由很简单，方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。<br>有些程序员认为Java程序设计语言对对象采用的是引用调用，实际上，这种理解是不对的。由于这种误解具有一定的普遍性，所以下面给出一个反例来详细地阐述一下这个问题。<br>首先，编写一个交换两个雇员对象的方法：</p>
+<pre><code>public static void swap(Employee x, Employee y) {
+    Employee temp = x;
+    x = y;
+    y = temp;
+}
+</code></pre><p>如果Java程序设计语言对对象采用的是引用调用，那么这个方法就应该能够实现交换数据的效果。</p>
+<pre><code>Employee a = new Employee(&quot;Alice&quot;,...);
+Employee b = new Employee(&quot;Bob&quot;,...);
+swap(a, b);
+// does a now refer to Bob, b to Alice?
+</code></pre><p>但是，方法并没有改变存储在变量a和b中的对象引用。swap方法的参数x和y被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝。</p>
+<pre><code>// x refers to Alice, y to Bob
+Employee temp = x;
+x = y;
+y = temp;
+// now x refers to Bob, y to Alice
+</code></pre><p>最终，白费力气。在方法结束时参数变量x和y被丢弃了。原来的变量a和b仍然引用这个方法调用之前所引用的对象。<br>这个过程说明：Java程序设计语言对对象采用的不是引用调用，实际上，<em>对象引用进行的是值传递</em>。</p>
+<p>下面总结一下Java程序设计语言中方法参数的使用情况：</p>
+<ul>
+<li>一个方法不能修改一个基本数据类型的参数（即数值型和布尔型）。</li>
+<li>一个方法可以改变一个对象参数的状态。</li>
+<li>一个方法不能让对象参数引用一个新的对象。</li>
+</ul>
+<h2 id="4、重载"><a href="#4、重载" class="headerlink" title="4、重载"></a>4、重载</h2><p>Java允许重载任何方法，而不只是构造器方法。因此，要完整地描述一个方法，需要指出方法名以及参数类型。这叫做方法的签名（signature）。例如，String类有4个称为indexOf的公有方法。它们的签名是</p>
+<ul>
+<li>indexOf(int)</li>
+<li>indexOf(int, int)</li>
+<li>indexOf(String)</li>
+<li>indexOf(String, int)</li>
+</ul>
+<p>返回类型不是方法签名的一部分。也就是说，不能有两个名字相同、参数类型也相同却返回不同类型值的方法。</p>
 
       
     </div>
@@ -358,22 +463,24 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/16/AJAX Cross-domain requests/" rel="next" title="AJAX Cross-domain requests">
-                <i class="fa fa-chevron-left"></i> AJAX Cross-domain requests
+              <a href="/2016/12/28/Fundamental-Programming-Structures-in-Java/" rel="next" title="Fundamental Programming Structures in Java">
+                <i class="fa fa-chevron-left"></i> Fundamental Programming Structures in Java
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/28/Fundamental-Programming-Structures-in-Java/" rel="prev" title="Fundamental Programming Structures in Java">
-                Fundamental Programming Structures in Java <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -399,8 +506,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/22/hello-world/"
-           data-title="Hello World" data-url="http://yoursite.com/2016/08/22/hello-world/">
+      <div class="ds-thread" data-thread-key="2017/01/02/objects-and-classes/"
+           data-title="Objects and Classes" data-url="http://yoursite.com/2017/01/02/objects-and-classes/">
       </div>
     
   </div>
@@ -509,7 +616,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、-不要编写返回引用可变对象的访问器方法"><span class="nav-number">1.</span> <span class="nav-text">1、 不要编写返回引用可变对象的访问器方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-final实例域"><span class="nav-number">2.</span> <span class="nav-text">2、 final实例域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、方法参数"><span class="nav-number">3.</span> <span class="nav-text">3、方法参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、重载"><span class="nav-number">4.</span> <span class="nav-text">4、重载</span></a></li></ol></div>
             
           </div>
         </section>
