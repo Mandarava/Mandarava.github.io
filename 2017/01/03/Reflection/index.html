@@ -94,7 +94,7 @@ Class类在程序运行期间，Java运行时系统始终为所有的对象维�
 <meta property="og:site_name" content="Mandarava">
 <meta property="og:description" content="反射能够分析类能力的程序称为反射(reflective)。
 Class类在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。然而，可以通过专门的Java类访问这些信息。保存这些信息的类被称为Class，这个名字很容易让人混淆。 Object类中的getClass()方法将会返回一个Clas">
-<meta property="og:updated_time" content="2017-01-03T15:28:22.845Z">
+<meta property="og:updated_time" content="2017-01-03T15:29:46.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reflection">
 <meta name="twitter:description" content="反射能够分析类能力的程序称为反射(reflective)。
@@ -329,7 +329,7 @@ Class类在程序运行期间，Java运行时系统始终为所有的对象维�
 
       
         <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>能够分析类能力的程序称为<em>反射</em>(reflective)。</p>
-<h3 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h3><p>在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。<br>然而，可以通过专门的Java类访问这些信息。保存这些信息的类被称为Class，这个名字很容易让人混淆。 Object类中的getClass()方法将会返回一个Class类型的实例。</p>
+<h3 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h3><p>在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。<br>然而，可以通过专门的Java类访问这些信息。保存这些信息的类被称为Class，这个名字很容易让人混淆。 Object类中的getClass()方法将会返回一个Class类型的实例。<br><a id="more"></a></p>
 <pre><code>Date d = new Date();
 Class c1 = d.getClass();
 String name = c1.getName(); // name is set to &quot;java.util.Date&quot;
