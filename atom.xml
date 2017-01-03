@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-02T12:34:30.196Z</updated>
+  <updated>2017-01-03T14:21:19.394Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/02/objects-and-classes/"/>
     <id>http://yoursite.com/2017/01/02/objects-and-classes/</id>
     <published>2017-01-02T09:18:05.000Z</published>
-    <updated>2017-01-02T12:34:30.196Z</updated>
+    <updated>2017-01-03T14:21:19.394Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1、-不要编写返回引用可变对象的访问器方法&quot;&gt;&lt;a href=&quot;#1、-不要编写返回引用可变对象的访问器方法&quot; class=&quot;headerlink&quot; title=&quot;1、 不要编写返回引用可变对象的访问器方法&quot;&gt;&lt;/a&gt;1、 不要编写返回引用可变对象的访问器方法&lt;/h2&gt;&lt;p&gt;　　在Employee类中就违反了这个设计原则，其中的getHireDay方法返回了一个Date类对象：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class Employe {
