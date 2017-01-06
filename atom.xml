@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-03T15:31:22.959Z</updated>
+  <updated>2017-01-03T15:34:34.188Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/03/Reflection/"/>
     <id>http://yoursite.com/2017/01/03/Reflection/</id>
     <published>2017-01-03T15:27:56.000Z</published>
-    <updated>2017-01-03T15:31:22.959Z</updated>
+    <updated>2017-01-03T15:34:34.188Z</updated>
     
     <content type="html">&lt;h2 id=&quot;反射&quot;&gt;&lt;a href=&quot;#反射&quot; class=&quot;headerlink&quot; title=&quot;反射&quot;&gt;&lt;/a&gt;反射&lt;/h2&gt;&lt;p&gt;能够分析类能力的程序称为&lt;em&gt;反射&lt;/em&gt;(reflective)。&lt;/p&gt;
 &lt;h3 id=&quot;Class类&quot;&gt;&lt;a href=&quot;#Class类&quot; class=&quot;headerlink&quot; title=&quot;Class类&quot;&gt;&lt;/a&gt;Class类&lt;/h3&gt;&lt;p&gt;在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。&lt;br&gt;然而，可以通过专门的Java类访问这些信息。保存这些信息的类被称为Class，这个名字很容易让人混淆。 Object类中的getClass()方法将会返回一个Class类型的实例。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -279,6 +279,8 @@ Object m = Class.forName(s).newInstance();
 &lt;h3 id=&quot;Class类&quot;&gt;&lt;a href=&quot;#Class类&quot; class=&quot;headerlink&quot; title=&quot;Class类&quot;&gt;&lt;/a&gt;Class类&lt;/h3&gt;&lt;p&gt;在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。 这个信息跟踪着每个对象所属的类。 虚拟机利用运行时类型信息选择相应的方法执行。&lt;br&gt;然而，可以通过专门的Java类访问这些信息。保存这些信息的类被称为Class，这个名字很容易让人混淆。 Object类中的getClass()方法将会返回一个Class类型的实例。&lt;br&gt;
     
     </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
