@@ -42,6 +42,7 @@ struts.xml
 
 ```xml
 <package name="employee" namespace="/control/employee" extends="struts-default">  
+
   <interceptors>  
     <interceptor name="permission" class="cn.test.interceptor.PermissionInterceptor"/>  
       <interceptor-stack name="permissionStack">  
@@ -53,9 +54,11 @@ struts.xml
   <global-results>  
     <result name="success">/WEB-INF/page/message.jsp</result>  
   </global-results>  
+
   <action name="list_*" class="cn.test.action.HelloWorldAction"method="{1}">  
     <interceptor-ref name="permissionStack" />  
   </action>  
+
 </package>  
 ```
 
@@ -67,8 +70,11 @@ struts.xml
 
 ```java
 public class PersonAction extends ActionSupport {  
+
   private String username;  
+
   private String mobile;  
+
   // get set  
       
   @Override  
@@ -76,12 +82,13 @@ public class PersonAction extends ActionSupport {
     if(this.username ==null || "".equals(this.username.trim())) {  
         this.addFieldError("username","用户名不能为空");  
     }  
+
     if(this.mobile == null || "".equals(this.mobile.trim())) {  
         this.addFieldError("mobile","手机号不能为空");  
-    }else {  
+    } else {  
       if(!Pattern.compile("^1[358]\\d{9}$").matcher(this.mobile).matches()) {  
         this.addFieldError("mobile","手机号格式不正确");  
-      }  
+      } 
     }  
   }
 
@@ -110,6 +117,7 @@ ActionClassName-**validation**.xml，其中ActionClassName为action的简单类�
 <?xml version="1.0"encoding="UTF-8"?>  
 <!DOCTYPE validators PUBLIC"-//OpenSymphony Group//XWork Validator 1.0.3//EN""http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">  
 <validators>  
+
   <field name="username">  
     <field-validator type="requiredstring">  
       <param name="trim">true</param>  
@@ -122,11 +130,13 @@ ActionClassName-**validation**.xml，其中ActionClassName为action的简单类�
     <field-validator type="requiredstring">  
         <message>手机号不能为空!</message>  
     </field-validator>  
+    
     <field-validator type="regex">  
       <param name="expression"><![CDATA[^1[358]\d{9}$]]></param>  
         <message>手机号格式不正确!</message>  
     </field-validator>  
   </field>  
+
 </validators>  
 ```
 <field>指定action中要校验的属性，<field-validator>指定校验器，上面指定的校验器*requiredstring*是由系统提供的，系统提供了能满足大部分验证要求的校验器，这些校验器的定义可以在xwork-2.x.jar中的com.opensymphony.xwork2.validator.validators下的default.xml中找到。
@@ -136,9 +146,10 @@ ActionClassName-**validation**.xml，其中ActionClassName为action的简单类�
 ### 基于XML配置方式实现对指定action方法进行校验
 
 校验文件取名应为：ActionClassName-ActionName-validation.xml
-
-    <action name="user_*" class="cn.test.action.UserAction" method="{1}"">  
+```xml
+    <action name="user_*" class="cn.test.action.UserAction" method="{1}">  
     </action>  
+```
 
 userAction中有以下两个处理方法：
 
