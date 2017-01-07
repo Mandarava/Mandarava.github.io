@@ -1,28 +1,45 @@
 ### 自定义拦截器
 
+```java
     package cn.test.interceptor;  
+    
     public class PermissionInterceptor implements Interceptor {  
+    
        publicvoid destroy() {  
+       
+       } 
+    
+       publicvoid init() { 
+    
        }  
-       publicvoid init() {  
-       }  
+    
        public String intercept(ActionInvocation invocation) throws Exception {  
-              Objectuser = ActionContext.getContext().getSession().get("user");  
-              if(user!=null) return invocation.invoke(); //如果user不为null,代表用户已经登录,允许执行action中的方法  
-              ActionContext.getContext().put("message","你没有权限执行该操作");  
-              return"message";   //最好为全局视图，许多地方都要使用  
+          Objectuser = ActionContext.getContext().getSession().get("user");
+          // 如果user不为null,代表用户已经登录,允许执行action中的方法  
+          if(user != null) {
+            return invocation.invoke();   
+          } 
+          ActionContext.getContext().put("message","你没有权限执行该操作");  
+          //最好为全局视图，许多地方都要使用
+          return "message";   
        }  
-    }  
-登录：
+    } 
+```
 
+登录：
+```java
     request.getSession().setAttribute("user","useradmin");
+```
 
 退出：
 
+```java
     request.getSession().removeAttribute("user");
+```
 
 struts.xml
 
+```xml
     <package name="employee" namespace="/control/employee" extends="struts-default">  
         <interceptors>  
             <interceptor name="permission" class="cn.test.interceptor.PermissionInterceptor"/>  
@@ -38,6 +55,7 @@ struts.xml
             <interceptor-ref name="permissionStack" />  
         </action>  
     </package>  
+```
 
 因为struts2中如文件上传，数据验证，封装请求参数到action等功能都是由系统默认的defaultStack中的拦截器实现的，所以我们定义的拦截器需要引用系统默认的defaultStack，这样应用才可以使用struts2框架提供的众多功能。
 
@@ -45,16 +63,18 @@ struts.xml
 
 ### 对Action中所有方法进行输入校验
 
+```java
     public class PersonAction extends ActionSupport{  
        private String username;  
        private String mobile;  
        // get set  
+      
        @Override  
        public void validate() {//会对action中的所有方法校验  
-            if(this.username==null|| "".equals(this.username.trim())) {  
+            if(this.username ==null || "".equals(this.username.trim())) {  
                 this.addFieldError("username","用户名不能为空");  
             }  
-            if(this.mobile==null|| "".equals(this.mobile.trim())) {  
+            if(this.mobile == null || "".equals(this.mobile.trim())) {  
                 this.addFieldError("mobile","手机号不能为空");  
             }else {  
                 if(!Pattern.compile("^1[358]\\d{9}$").matcher(this.mobile).matches()){  
@@ -63,11 +83,13 @@ struts.xml
             }  
        }  
     } 
+```
 验证失败后，请求转发至input视图：
 
+```
     <result name="input">index.jsp</result>
-
-在addUser.jsp页面中使用<s:fielderror/>显示失败信息。
+```
+在addUser.jsp页面中使用*<s:fielderror/>*显示失败信息。
 
 对action指定方法进行校验
 
@@ -81,6 +103,7 @@ public voidvalidateXxx() {}   //校验action中方法名为Xxx的方法,其他�
 
 ActionClassName-**validation**.xml，其中ActionClassName为action的简单类名，-validation为固定写法。
 
+```xml
     <?xml version="1.0"encoding="UTF-8"?>  
     <!DOCTYPE validators PUBLIC"-//OpenSymphony Group//XWork Validator 1.0.3//EN""http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">  
     <validators>  
@@ -102,7 +125,7 @@ ActionClassName-**validation**.xml，其中ActionClassName为action的简单类�
             </field-validator>  
         </field>  
     </validators>  
-
+```
 <field>指定action中要校验的属性，<field-validator>指定校验器，上面指定的校验器*requiredstring*是由系统提供的，系统提供了能满足大部分验证要求的校验器，这些校验器的定义可以在xwork-2.x.jar中的com.opensymphony.xwork2.validator.validators下的default.xml中找到。
 
 ![CDATA[] 把里面的内容当作普通文本
