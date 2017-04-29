@@ -76,7 +76,7 @@ public class Bank {
     private double[] accounts;
     private Object lock = new Object();
     ...
-    public void transffer(int from, int to, int amount) {
+    public void transfer(int from, int to, int amount) {
         synchronized (lock) { // an ad-hoc lock
         accounts[from] -= amout;
         accounts[to] += amount;
@@ -105,7 +105,7 @@ public void flipDone {
 ### 原子性
 
 AtomicInteger 类提供了方法incrementAndGet和decrementAndGet，它们分别以原子方式将一个整数自增或自减。可以安全地使用AtomicInteger作为共享计数器而无须同步。
-另外这个包中还包含AtomicBoolean、AtomicLong和AtomicReference以及Boolean值、整数、log值和引用的原子数组。
+另外这个包中还包含AtomicBoolean、AtomicLong和AtomicReference以及Boolean值、整数、long值和引用的原子数组。
 
 ### 读/写锁
 
@@ -150,11 +150,15 @@ public void transfer() {
 }
 ```
 
+```java
 Lock readLock()
+```
 
 得到一个可以被多个读操作共用的读锁，但会排斥所有写操作。
 
+```java
 Lock writeLock()
+```
 
 得到一个写锁，排斥所有其他的读操作和写操作。
 
@@ -208,7 +212,6 @@ public interface Future<V> {
 FutureTask包装器是一种非常便利的机制，可将Callable转换成Future和Runnable，它同时实现二者的接口。 例如：
 
 ```java
-
 Callable<Integer> myComputation = ...;
 FutureTask<Integer> task = new FutureTask<Integer>(myComputation);
 Thread t = new Thread(task); // it's a Runnable
