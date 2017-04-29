@@ -107,7 +107,6 @@ public void flipDone {
 AtomicInteger 类提供了方法incrementAndGet和decrementAndGet，它们分别以原子方式将一个整数自增或自减。可以安全地使用AtomicInteger作为共享计数器而无须同步。
 另外这个包中还包含AtomicBoolean、AtomicLong和AtomicReference以及Boolean值、整数、log值和引用的原子数组。
 
-
 ### 读/写锁
 
 下面是使用读写锁的必要步骤：
