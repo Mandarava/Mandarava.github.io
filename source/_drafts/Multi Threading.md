@@ -255,7 +255,9 @@ public void run() {
 
 await 方法有一个可选的超时参数：
 
+```java
 barrier.await(100, TimeUnit.MILLISECONDS);
+```
 
 如果任何一个在障栅上等待的线程离开了障栅，那么障栅就被破坏了。在这种情况下，所有其他线程的await方法抛出BrokenBarrierException异常。那些已经在等待的线程立即终止await的调用。
 
