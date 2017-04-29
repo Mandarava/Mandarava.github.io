@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Mandarava">
 <meta property="og:description" content="守护线程可以通过调用t.setDaemon(true)；
 将线程转换为守护线程(daemon thread)。 守护线程的唯一用途是为其他线程提供服务。守护线程应该永远不去访问固有资源，如文件、数据库、因为它会在任何时候甚至在一个操作的中间发生中断">
-<meta property="og:updated_time" content="2017-04-29T06:57:17.618Z">
+<meta property="og:updated_time" content="2017-04-29T07:07:22.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Multi Threading">
 <meta name="twitter:description" content="守护线程可以通过调用t.setDaemon(true)；
@@ -493,7 +493,7 @@
 <p>每一个线程做一些工作，完成后在障栅上调用await;</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    doWork();</span><br><span class="line">    barrier.await();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>await 方法有一个可选的超时参数：</p>
-<p>barrier.await(100, TimeUnit.MILLISECONDS);</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barrier.await(<span class="number">100</span>, TimeUnit.MILLISECONDS);</span><br></pre></td></tr></table></figure>
 <p>如果任何一个在障栅上等待的线程离开了障栅，那么障栅就被破坏了。在这种情况下，所有其他线程的await方法抛出BrokenBarrierException异常。那些已经在等待的线程立即终止await的调用。</p>
 <p>可以提供一个可选的障栅动作(barrier action)，当所有线程到达障栅的时候就会执行这一动作。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Runnable barrierAction = ...;</span><br><span class="line">CyclicBarrier barrier = <span class="keyword">new</span> CyclicBarrier(nthreads, barrierAction);</span><br></pre></td></tr></table></figure>
